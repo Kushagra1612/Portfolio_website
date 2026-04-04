@@ -2,7 +2,7 @@ import React, { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 
-import CanvasLoader from "../../Loader";
+import CanvasLoader from "../Loader";
 import { computerImg } from "../../assets"; // ← import it
 
 const Computers = () => {
