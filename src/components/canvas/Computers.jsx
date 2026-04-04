@@ -37,14 +37,14 @@ const ComputersCanvas = () => {
     window.matchMedia("(max-width: 768px)").matches
   );
 
-  // ✅ show static image on mobile
+  
   if (isMobile) {
     return (
-      <div className="w-full h-full flex items-center justify-center">
+      <div className="w-full h-full absolute inset-0 flex items-center justify-center">
         <img
           src={computerImg}
           alt="computer"
-          className="w-[280px] h-auto object-contain"
+          className="w-full h-full object-contain"
         />
       </div>
     );
