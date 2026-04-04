@@ -6,6 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import computerImg from "./computer.png"; 
 
 import css from "./tech/css.png";
 import git from "./tech/git.png";
@@ -38,6 +39,7 @@ export {
   html,
   javascript,
   kotlin,
+  computerImg,
   cpp,
   nodejs,
   reactjs,
