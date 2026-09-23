@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
@@ -47,11 +47,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in HTML,CSS,
-        JavaScript, and expertise in frameworks like React, Redux and Node.js.
-        I'm a quick learner and a versatile developer dedicated to creating seamless,
-        user-friendly interfaces across all devices.
-        Let’s work together to build something powerful!
+        I am a software developer with hands-on experience in full-stack web
+        development, Android (Kotlin), AI engineering, and systems programming.
+        I have built projects like SmartBudget AI — an AI-powered finance manager
+        using Gemini API and LangGraph — and an Ocean Hazards Intelligence
+        Platform. I am passionate about combining AI with real-world applications,
+        and I love picking up new technologies fast. Let us build something
+        impactful together!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

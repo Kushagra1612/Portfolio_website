@@ -1,4 +1,4 @@
-import {
+﻿import {
   mobile,
   backend,
   creator,
@@ -18,6 +18,9 @@ import {
   ocean,
   traffic,
   foodorder,
+  smartbudgetai,
+  python,
+  postgresql,
 } from "../assets";
 
 export const navLinks = [
@@ -37,68 +40,82 @@ export const navLinks = [
 
 const services = [
   {
-    title: "App Developer",
-    icon: web,
-  },
-  {
-    title: "React Developer",
+    title: "Android Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "AI Engineer",
+    icon: creator,
   },
   {
-    title: "C++ Developer",
-    icon: creator,
+    title: "Full Stack Developer",
+    icon: web,
+  },
+  {
+    title: "Systems Developer (C++)",
+    icon: backend,
   },
 ];
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "Kotlin",
-    icon: kotlin,
+    name: "Python",
+    icon: python,
   },
   {
     name: "React JS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "JavaScript",
+    icon: javascript,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "C++",
+    icon: cpp,
+  },
+  {
+    name: "Kotlin",
+    icon: kotlin,
   },
   {
     name: "Node JS",
     icon: nodejs,
   },
   {
-    name: "cpp",
-    icon: cpp,
+    name: "Android Jetpack",
+    icon: androidjetpack,
   },
   {
-    name: "git",
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
+  {
+    name: "Git",
     icon: git,
   },
-  {
-    name: "androidjetpack",
-    icon: androidjetpack,
-  }
+];
+
+const additionalSkills = [
+  "FastAPI",
+  "LangGraph",
+  "Gemini API",
+  "PyTorch",
+  "OpenCV",
+  "YOLOv5",
+  "Next.js",
+  "Docker",
+  "Firebase",
+  "REST APIs",
+  "CI/CD",
 ];
 
 const experiences = [
@@ -108,23 +125,25 @@ const experiences = [
     icon: google,
     iconBg: "#383E56",
     date: "Jan 2025 - March 2025",
-    points: ["Worked on Android application development using Kotlin/Java, implementing UI components, activity lifecycle management, and API integration.",
-              "Gained hands-on experience with Android Studio and modern Android development practices.",
-              "Technologies Used: Kotlin/Java, XML (UI layouts), REST APIs, Firebase, Git/GitHub.",
-              "Working on APIs acts as a bridge that allows two software applications to communicate with each other."
+    points: [
+      "Worked on Android application development using Kotlin/Java, implementing UI components, activity lifecycle management, and API integration.",
+      "Gained hands-on experience with Android Studio and modern Android development practices.",
+      "Technologies Used: Kotlin/Java, XML (UI layouts), REST APIs, Firebase, Git/GitHub.",
+      "Integrated third-party REST APIs to enable real-time data fetching, improving app responsiveness and delivering dynamic user experiences.",
     ],
   },
 ];
 
 const Achievements = [
   {
-   description: "Participated in Synapse.AI Hackathon organized by Delhi Technological University and contributed to the development of an innovative solution.",
+    description:
+      "Participated in Synapse.AI Hackathon organized by Delhi Technological University and contributed to the development of an innovative solution.",
     name: "DTU Synapse.AI",
     image: "https://upload.wikimedia.org/wikipedia/en/b/b5/DTU%2C_Delhi_official_logo.png",
   },
   {
     description:
-    "Developed an Ocean Hazards Intelligence Platform at SIH 2025 for [Ministry of Earth Sciences (MoES)], integrating real-time social media analytics and crowdsourced reporting.",
+      "Developed an Ocean Hazards Intelligence Platform at SIH 2025 for [Ministry of Earth Sciences (MoES)], integrating real-time social media analytics and crowdsourced reporting.",
     name: "SIH 2025",
     image: "https://i.ytimg.com/vi/znMbKz6ZPno/maxresdefault.jpg",
   },
@@ -134,7 +153,7 @@ const projects = [
   {
     name: "Ocean Hazards Intelligence Platform",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A real-time ocean hazard intelligence platform built for the Ministry of Earth Sciences (SIH 2025), integrating social media analytics, crowdsourced reporting, and live hazard alerts to help coastal communities stay safe.",
     tags: [
       {
         name: "react",
@@ -155,7 +174,7 @@ const projects = [
   {
     name: "Smart Traffic Management System",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "An AI-powered traffic management system using computer vision and deep learning to detect vehicles, analyse traffic density in real time, and dynamically adjust signal timings to reduce congestion.",
     tags: [
       {
         name: "OpenCv",
@@ -176,7 +195,7 @@ const projects = [
   {
     name: "Food Order App",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A full-stack food ordering application where users can browse restaurants, add items to cart, and place orders seamlessly — built with a responsive UI and real-time order management.",
     tags: [
       {
         name: "nextjs",
@@ -194,6 +213,36 @@ const projects = [
     image: foodorder,
     source_code_link: "https://github.com/Kushagra1612/Food_Ordering_App",
   },
+  {
+    name: "SmartBudget AI",
+    description:
+      "An AI-powered personal finance manager to track expenses, manage budgets, and get smart insights — powered by Gemini AI, anomaly detection, and financial health scoring.",
+    tags: [
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "FastAPI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "PostgreSQL",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "LangGraph",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Gemini API",
+        color: "green-text-gradient",
+      },
+    ],
+    image: smartbudgetai,
+    source_code_link: "https://github.com/Kushagra1612/SmartBudget-AI",
+    live_link: "https://smartbudgetaii.vercel.app/",
+  },
 ];
 
-export { services, technologies, experiences, Achievements, projects };
+export { services, technologies, additionalSkills, experiences, Achievements, projects };

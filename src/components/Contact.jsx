@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+﻿import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -27,11 +27,6 @@ const Contact = () => {
     });
   };
 
-console.log({
-  service: import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-  template: import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-  key: import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
-});
 
   const handleSubmit = (e) => {
   e.preventDefault();
@@ -73,6 +68,30 @@ console.log({
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <div className='flex flex-wrap gap-4 mt-3'>
+          <a
+            href='mailto:kushagraverma1234@gmail.com'
+            className='text-secondary text-[14px] flex items-center gap-2 hover:text-white transition-colors'
+          >
+            ✉️ kushagraverma1234@gmail.com
+          </a>
+          <a
+            href='https://www.linkedin.com/in/kushagravr16'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-secondary text-[14px] flex items-center gap-2 hover:text-white transition-colors'
+          >
+            🔗 LinkedIn
+          </a>
+          <a
+            href='https://github.com/Kushagra1612'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-secondary text-[14px] flex items-center gap-2 hover:text-white transition-colors'
+          >
+            💻 GitHub
+          </a>
+        </div>
 
         <form
           ref={formRef}
@@ -97,7 +116,7 @@ console.log({
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="What's your email address?"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -133,3 +152,5 @@ console.log({
 };
 
 export default SectionWrapper(Contact, "contact");
+
+
