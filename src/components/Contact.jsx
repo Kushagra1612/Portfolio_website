@@ -16,6 +16,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ type: "", message: "" });
 
   const handleChange = (e) => {
     const { target } = e;
@@ -27,36 +28,56 @@ const Contact = () => {
     });
   };
 
-
   const handleSubmit = (e) => {
-  e.preventDefault();
-  setLoading(true);
+    e.preventDefault();
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      setStatus({ type: "error", message: "Please fill in all fields." });
+      return;
+    }
 
-  emailjs
-    .send(
-      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-      {
-        from_name: form.name,
-        to_name: "Kushagra Verma",
-        from_email: form.email,
-        to_email: "kushagraverma1234@gmail.com",
-        message: form.message,
-      },
-      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-    )
-    .then(() => {
-      alert("Thank you. I will get back to you as soon as possible.");
-      setForm({ name: "", email: "", message: "" });
-    })
-    .catch((error) => {
-      console.error(error);
-      alert("Ahh, something went wrong. Please try again.");
-    })
-    .finally(() => {
-      setLoading(false); 
-    });
-};
+    setLoading(true);
+    setStatus({ type: "", message: "" });
+
+    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID || "service_s24i9qs";
+    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID || "template_f83h1kh";
+    const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY || "jTzf6eJldflwcOxNo";
+
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          from_name: form.name,
+          name: form.name,
+          user_name: form.name,
+          to_name: "Kushagra Verma",
+          from_email: form.email,
+          email: form.email,
+          user_email: form.email,
+          reply_to: form.email,
+          to_email: "kushagraverma1234@gmail.com",
+          message: form.message,
+        },
+        publicKey
+      )
+      .then(() => {
+        setStatus({
+          type: "success",
+          message: "Thank you! I will get back to you as soon as possible.",
+        });
+        setForm({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        setStatus({
+          type: "error",
+          message: error?.text || "Something went wrong. Please try again or email directly.",
+        });
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
   return (
     <div
@@ -103,6 +124,7 @@ const Contact = () => {
             <input
               type='text'
               name='name'
+              required
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
@@ -114,6 +136,7 @@ const Contact = () => {
             <input
               type='email'
               name='email'
+              required
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email address?"
@@ -125,6 +148,7 @@ const Contact = () => {
             <textarea
               rows={7}
               name='message'
+              required
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
@@ -132,12 +156,24 @@ const Contact = () => {
             />
           </label>
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
+          <div className='flex flex-wrap items-center gap-4'>
+            <button
+              type='submit'
+              disabled={loading}
+              className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary disabled:opacity-50 hover:bg-[#915EFF] transition-colors'
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+            {status.message && (
+              <p
+                className={`text-[14px] font-medium ${
+                  status.type === "success" ? "text-green-400" : "text-red-400"
+                }`}
+              >
+                {status.message}
+              </p>
+            )}
+          </div>
         </form>
       </motion.div>
 
@@ -152,5 +188,3 @@ const Contact = () => {
 };
 
 export default SectionWrapper(Contact, "contact");
-
-
