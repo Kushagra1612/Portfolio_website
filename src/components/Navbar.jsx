@@ -1,9 +1,9 @@
-﻿import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close, github, linkedin } from "../assets";
+import { logo, menu, close, github, linkedin, leetcode, codeforces } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -66,7 +66,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className='flex flex-row items-center gap-3 border-l border-secondary/30 pl-6'>
+          <div className='flex flex-row items-center gap-2.5 border-l border-secondary/30 pl-5'>
             <a
               href='https://github.com/Kushagra1612'
               target='_blank'
@@ -86,10 +86,28 @@ const Navbar = () => {
               <img src={linkedin} alt='LinkedIn' className='w-5 h-5 object-contain' />
             </a>
             <a
+              href='https://leetcode.com/u/Kushagra_vr/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='w-9 h-9 rounded-full bg-tertiary flex justify-center items-center hover:scale-110 transition-all duration-300'
+              title='LeetCode Profile'
+            >
+              <img src={leetcode} alt='LeetCode' className='w-5 h-5 object-contain' />
+            </a>
+            <a
+              href='https://codeforces.com/profile/kushagraverma1234'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='w-9 h-9 rounded-full bg-tertiary flex justify-center items-center hover:scale-110 transition-all duration-300'
+              title='Codeforces Profile'
+            >
+              <img src={codeforces} alt='Codeforces' className='w-5 h-5 object-contain' />
+            </a>
+            <a
               href='/resume.pdf'
               target='_blank'
               rel='noopener noreferrer'
-              className='ml-2 text-white bg-[#915EFF] hover:bg-[#7a4cdb] px-3.5 py-1.5 rounded-lg text-[13px] font-medium transition-colors shadow-sm'
+              className='ml-1 text-white bg-[#915EFF] hover:bg-[#7a4cdb] px-3.5 py-1.5 rounded-lg text-[13px] font-medium transition-colors shadow-sm'
             >
               Resume 📄
             </a>
@@ -107,7 +125,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[160px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[180px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
@@ -124,22 +142,42 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
-              <li className='flex flex-row items-center gap-4 pt-3 border-t border-secondary/30 w-full'>
+              <li className='flex flex-row items-center gap-3 pt-3 border-t border-secondary/30 w-full'>
                 <a
                   href='https://github.com/Kushagra1612'
                   target='_blank'
                   rel='noopener noreferrer'
                   title='GitHub'
+                  className='w-8 h-8 rounded-full bg-tertiary flex justify-center items-center'
                 >
-                  <img src={github} alt='GitHub' className='w-6 h-6 object-contain' />
+                  <img src={github} alt='GitHub' className='w-4 h-4 object-contain' />
                 </a>
                 <a
                   href='https://www.linkedin.com/in/kushagravr16'
                   target='_blank'
                   rel='noopener noreferrer'
                   title='LinkedIn'
+                  className='w-8 h-8 rounded-full bg-tertiary flex justify-center items-center'
                 >
-                  <img src={linkedin} alt='LinkedIn' className='w-6 h-6 object-contain' />
+                  <img src={linkedin} alt='LinkedIn' className='w-4 h-4 object-contain' />
+                </a>
+                <a
+                  href='https://leetcode.com/u/Kushagra_vr/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  title='LeetCode'
+                  className='w-8 h-8 rounded-full bg-tertiary flex justify-center items-center'
+                >
+                  <img src={leetcode} alt='LeetCode' className='w-4 h-4 object-contain' />
+                </a>
+                <a
+                  href='https://codeforces.com/profile/kushagraverma1234'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  title='Codeforces'
+                  className='w-8 h-8 rounded-full bg-tertiary flex justify-center items-center'
+                >
+                  <img src={codeforces} alt='Codeforces' className='w-4 h-4 object-contain' />
                 </a>
               </li>
               <li className='w-full'>

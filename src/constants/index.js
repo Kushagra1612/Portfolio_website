@@ -25,6 +25,8 @@ import {
   udemyReact,
   huggingfaceAgents,
   googleAndroidCert,
+  leetcode,
+  codeforces,
 } from "../assets";
 
 export const navLinks = [
@@ -147,6 +149,20 @@ const experiences = [
 const Achievements = [
   {
     description:
+      "LeetCode rating: 1585. Solved 300+ problems across DSA topics including arrays, trees, and dynamic programming.",
+    name: "LeetCode (@Kushagra_vr)",
+    image: leetcode,
+    link: "https://leetcode.com/u/Kushagra_vr/",
+  },
+  {
+    description:
+      "Competitive programmer solving algorithmic challenges and participating in live contests.",
+    name: "Codeforces (@kushagraverma1234)",
+    image: codeforces,
+    link: "https://codeforces.com/profile/kushagraverma1234",
+  },
+  {
+    description:
       "Participated in Synapse.AI Hackathon organized by Delhi Technological University and contributed to the development of an innovative solution.",
     name: "DTU Synapse.AI",
     image: "https://upload.wikimedia.org/wikipedia/en/b/b5/DTU%2C_Delhi_official_logo.png",
@@ -256,30 +272,6 @@ const projects = [
 ];
 
 const certifications = [
-  {
-    title: "Android Developer Virtual Internship",
-    issuer: "Google for Developers | AICTE EduSkills",
-    instructor: "India Edu Program (AICTE & EduSkills)",
-    date: "Jan - Mar 2025",
-    length: "10 weeks (Grade: E - Excellent)",
-    credential_id: "21f19c3649ffa0562ca699987122977e",
-    certificate_url: "",
-    image: googleAndroidCert,
-    tags: [
-      {
-        name: "Android",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Kotlin",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Google",
-        color: "pink-text-gradient",
-      },
-    ],
-  },
   {
     title: "React - The Complete Guide 2025 (incl. Next.js, Redux)",
     issuer: "Udemy",

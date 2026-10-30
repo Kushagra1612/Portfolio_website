@@ -10,29 +10,41 @@ const FeedbackCard = ({
   description,
   name,
   image,
+  link,
 }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    // Added 'flex flex-col justify-between' and 'h-full'
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full flex flex-col justify-between'
+    onClick={() => link && window.open(link, "_blank")}
+    className={`bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full flex flex-col justify-between ${
+      link
+        ? "cursor-pointer hover:border-[#915EFF]/50 border border-transparent transition-all hover:scale-[1.02]"
+        : ""
+    }`}
   >
     <div>
-      <p className='text-white font-black text-[48px]'>"</p>
+      <div className='flex justify-between items-center'>
+        <p className='text-white font-black text-[48px]'>"</p>
+        {link && (
+          <span className='text-secondary text-[12px] flex items-center gap-1 hover:text-white transition-colors'>
+            View Profile ↗
+          </span>
+        )}
+      </div>
       <div className='mt-1'>
-        <p className='text-white tracking-wider text-[18px]'>{description}</p>
+        <p className='text-white tracking-wider text-[16px]'>{description}</p>
       </div>
     </div>
 
-    <div className='mt-7 flex justify-between items-center gap-1'>
+    <div className='mt-7 flex justify-between items-center gap-2'>
       <div className='flex-1 flex flex-col'>
-        <p className='text-white font-medium text-[16px]'>
+        <p className='text-white font-medium text-[15px]'>
           <span className='blue-text-gradient'>@</span> {name}
         </p>
       </div>
       <img
         src={image}
         alt={`feedback_by-${name}`}
-        className='w-10 h-10 rounded-full object-cover'
+        className='w-10 h-10 rounded-full object-contain bg-tertiary p-1'
       />
     </div>
   </motion.div>

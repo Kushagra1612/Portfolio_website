@@ -1,5 +1,5 @@
-﻿import React from "react";
-import { github, linkedin } from "../assets";
+import React from "react";
+import { github, linkedin, leetcode, codeforces } from "../assets";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Kushagra Verma. All rights reserved.
         </p>
 
-        <div className='flex items-center gap-5'>
+        <div className='flex items-center gap-4 sm:gap-5 flex-wrap justify-center'>
           <a
             href='/resume.pdf'
             download
@@ -40,6 +40,24 @@ const Footer = () => {
             title='LinkedIn'
           >
             <img src={linkedin} alt='LinkedIn' className='w-4 h-4 object-contain' />
+          </a>
+          <a
+            href='https://leetcode.com/u/Kushagra_vr/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='w-8 h-8 rounded-full bg-tertiary flex justify-center items-center hover:scale-110 transition-all duration-300'
+            title='LeetCode'
+          >
+            <img src={leetcode} alt='LeetCode' className='w-4 h-4 object-contain' />
+          </a>
+          <a
+            href='https://codeforces.com/profile/kushagraverma1234'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='w-8 h-8 rounded-full bg-tertiary flex justify-center items-center hover:scale-110 transition-all duration-300'
+            title='Codeforces'
+          >
+            <img src={codeforces} alt='Codeforces' className='w-4 h-4 object-contain' />
           </a>
         </div>
       </div>
