@@ -35,6 +35,7 @@ import smartbudgetai from "./smartbudgetai.png";
 import udemyNode from "./certificates/udemy_node.png";
 import udemyReact from "./certificates/udemy_react.png";
 import huggingfaceAgents from "./certificates/huggingface_agents.webp";
+import googleAndroidCert from "./certificates/google_android_internship.png";
 
 export {
   logo,
@@ -71,6 +72,7 @@ export {
   udemyNode,
   udemyReact,
   huggingfaceAgents,
+  googleAndroidCert,
 };
 
 

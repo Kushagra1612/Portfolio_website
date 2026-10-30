@@ -24,6 +24,7 @@ import {
   udemyNode,
   udemyReact,
   huggingfaceAgents,
+  googleAndroidCert,
 } from "../assets";
 
 export const navLinks = [
@@ -253,6 +254,30 @@ const projects = [
 ];
 
 const certifications = [
+  {
+    title: "Android Developer Virtual Internship",
+    issuer: "Google for Developers | AICTE EduSkills",
+    instructor: "India Edu Program (AICTE & EduSkills)",
+    date: "Jan - Mar 2025",
+    length: "10 weeks (Grade: E - Excellent)",
+    credential_id: "21f19c3649ffa0562ca699987122977e",
+    certificate_url: "",
+    image: googleAndroidCert,
+    tags: [
+      {
+        name: "Android",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Kotlin",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Google",
+        color: "pink-text-gradient",
+      },
+    ],
+  },
   {
     title: "React - The Complete Guide 2025 (incl. Next.js, Redux)",
     issuer: "Udemy",
