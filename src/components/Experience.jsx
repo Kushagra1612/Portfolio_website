@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -12,7 +12,7 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, onCertificateClick }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -52,11 +52,34 @@ const ExperienceCard = ({ experience }) => {
           </li>
         ))}
       </ul>
+
+      {experience.certificate_image && (
+        <div className='mt-6 pt-4 border-t border-secondary/20 flex flex-wrap items-center justify-between gap-3'>
+          {experience.certificate_grade && (
+            <span className='text-[12px] text-secondary font-medium'>
+              🏅 {experience.certificate_grade}
+            </span>
+          )}
+          <button
+            onClick={() =>
+              onCertificateClick(
+                experience.certificate_image,
+                `${experience.title} - ${experience.company_name}`
+              )
+            }
+            className='bg-[#915EFF] hover:bg-[#7a4cdb] text-white text-[13px] font-semibold py-1.5 px-3.5 rounded-lg transition-colors flex items-center gap-1.5 shadow-md ml-auto'
+          >
+            📜 View Certificate
+          </button>
+        </div>
+      )}
     </VerticalTimelineElement>
   );
 };
 
 const Experience = () => {
+  const [selectedCert, setSelectedCert] = useState(null);
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -74,10 +97,49 @@ const Experience = () => {
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              onCertificateClick={(img, title) => setSelectedCert({ img, title })}
             />
           ))}
         </VerticalTimeline>
       </div>
+
+      {/* Full-screen Certificate Preview Lightbox Modal */}
+      <AnimatePresence>
+        {selectedCert && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedCert(null)}
+            className='fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 cursor-pointer'
+          >
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className='relative max-w-4xl max-h-[90vh] bg-tertiary rounded-2xl p-4 shadow-2xl flex flex-col items-center'
+            >
+              <div className='w-full flex justify-between items-center mb-3 pb-2 border-b border-secondary/20'>
+                <h4 className='text-white font-semibold text-[16px] truncate pr-4'>
+                  {selectedCert.title}
+                </h4>
+                <button
+                  onClick={() => setSelectedCert(null)}
+                  className='text-secondary hover:text-white text-xl font-bold px-2 py-1'
+                >
+                  ✕
+                </button>
+              </div>
+              <img
+                src={selectedCert.img}
+                alt={selectedCert.title}
+                className='max-h-[75vh] w-auto object-contain rounded-lg shadow-lg'
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

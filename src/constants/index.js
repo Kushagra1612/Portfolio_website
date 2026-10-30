@@ -133,6 +133,8 @@ const experiences = [
     icon: google,
     iconBg: "#383E56",
     date: "Jan 2025 - March 2025",
+    certificate_image: googleAndroidCert,
+    certificate_grade: "Grade: E (Excellent)",
     points: [
       "Worked on Android application development using Kotlin/Java, implementing UI components, activity lifecycle management, and API integration.",
       "Gained hands-on experience with Android Studio and modern Android development practices.",
