@@ -1,4 +1,4 @@
-﻿import logo from "./logo.svg";
+import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -32,6 +32,10 @@ import traffic from "./traffic.png";
 import foodorder from "./foodorder.png";
 import smartbudgetai from "./smartbudgetai.png";
 
+import udemyNode from "./certificates/udemy_node.png";
+import udemyReact from "./certificates/udemy_react.png";
+import huggingfaceAgents from "./certificates/huggingface_agents.webp";
+
 export {
   logo,
   backend,
@@ -64,6 +68,9 @@ export {
   postgresql,
   langgraph,
   gemini,
+  udemyNode,
+  udemyReact,
+  huggingfaceAgents,
 };
 
 

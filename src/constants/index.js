@@ -1,4 +1,4 @@
-﻿import {
+import {
   mobile,
   backend,
   creator,
@@ -21,6 +21,9 @@
   smartbudgetai,
   python,
   postgresql,
+  udemyNode,
+  udemyReact,
+  huggingfaceAgents,
 } from "../assets";
 
 export const navLinks = [
@@ -31,6 +34,10 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "certifications",
+    title: "Certifications",
   },
   {
     id: "contact",
@@ -245,4 +252,79 @@ const projects = [
   },
 ];
 
-export { services, technologies, additionalSkills, experiences, Achievements, projects };
+const certifications = [
+  {
+    title: "React - The Complete Guide 2025 (incl. Next.js, Redux)",
+    issuer: "Udemy",
+    instructor: "Maximilian Schwarzmüller",
+    date: "Nov 2025",
+    length: "71.5 total hours",
+    credential_id: "UC-368a55cd-da62-4cda-841e-b3e3bf359c51",
+    certificate_url: "https://ude.my/UC-368a55cd-da62-4cda-841e-b3e3bf359c51",
+    image: udemyReact,
+    tags: [
+      {
+        name: "React.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Next.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "pink-text-gradient",
+      },
+    ],
+  },
+  {
+    title: "NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
+    issuer: "Udemy",
+    instructor: "Maximilian Schwarzmüller",
+    date: "Oct 2026",
+    length: "40.5 total hours",
+    credential_id: "UC-58c8a8f1-cc2b-47f2-a134-55b52f31bf56",
+    certificate_url: "https://ude.my/UC-58c8a8f1-cc2b-47f2-a134-55b52f31bf56",
+    image: udemyNode,
+    tags: [
+      {
+        name: "Node.js",
+        color: "green-text-gradient",
+      },
+      {
+        name: "REST APIs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GraphQL",
+        color: "pink-text-gradient",
+      },
+    ],
+  },
+  {
+    title: "Fundamentals of Agents",
+    issuer: "Hugging Face",
+    instructor: "Hugging Face Agents Course",
+    date: "Sept 2026",
+    length: "Unit 1: Foundations of Agents",
+    credential_id: "Hugging Face Certified",
+    certificate_url: "https://huggingface.co/learn/agents-course",
+    image: huggingfaceAgents,
+    tags: [
+      {
+        name: "AI Agents",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "LLMs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Hugging Face",
+        color: "green-text-gradient",
+      },
+    ],
+  },
+];
+
+export { services, technologies, additionalSkills, experiences, Achievements, projects, certifications };
