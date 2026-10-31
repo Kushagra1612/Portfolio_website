@@ -138,9 +138,9 @@ const experiences = [
     certificate_image: googleAndroidCert,
     certificate_grade: "Grade: E (Excellent)",
     points: [
-      "Developed Android UI screens in Kotlin/Java with XML layouts and fixed 10+ state-management bugs caused by configuration changes.",
-      "Integrated a Firebase backend through REST APIs for real-time data sync, reducing manual data-fetch latency by ~25%.",
-      "Collaborated in Agile sprints using Git branches and pull requests, and resolved merge conflicts during code review.",
+      "Engineered 5+ Android screens in Kotlin with XML/ConstraintLayout; diagnosed and resolved 10+ state-management bugs caused by activity lifecycle and configuration changes.",
+      "Wired Firestore REST APIs for real-time data sync with offline caching, cutting manual data-fetch latency by ~25% and improving UX on low-bandwidth connections.",
+      "Shipped features across 3-day Agile sprints using Git feature branches; raised pull requests with inline reviews and resolved merge conflicts independently.",
     ],
   },
 ];
