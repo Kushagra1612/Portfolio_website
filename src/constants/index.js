@@ -1,4 +1,4 @@
-import {
+﻿import {
   mobile,
   backend,
   creator,
@@ -131,17 +131,16 @@ const additionalSkills = [
 const experiences = [
   {
     title: "Android Developer Virtual Intern",
-    company_name: "Google",
+    company_name: "AICTE-EduSkills (Google for Developers)",
     icon: google,
     iconBg: "#383E56",
-    date: "Jan 2025 - March 2025",
+    date: "Jan 2025 - Mar 2025",
     certificate_image: googleAndroidCert,
     certificate_grade: "Grade: E (Excellent)",
     points: [
-      "Worked on Android application development using Kotlin/Java, implementing UI components, activity lifecycle management, and API integration.",
-      "Gained hands-on experience with Android Studio and modern Android development practices.",
-      "Technologies Used: Kotlin/Java, XML (UI layouts), REST APIs, Firebase, Git/GitHub.",
-      "Integrated third-party REST APIs to enable real-time data fetching, improving app responsiveness and delivering dynamic user experiences.",
+      "Developed Android UI screens in Kotlin/Java with XML layouts and fixed 10+ state-management bugs caused by configuration changes.",
+      "Integrated a Firebase backend through REST APIs for real-time data sync, reducing manual data-fetch latency by ~25%.",
+      "Collaborated in Agile sprints using Git branches and pull requests, and resolved merge conflicts during code review.",
     ],
   },
 ];
