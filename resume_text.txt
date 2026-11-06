@@ -1,0 +1,82 @@
+KUSHAGRA VERMA 
++91 8171479779 | kushagraverma1234@gmail.com | linkedin.com/in/kushagravr16 | github.com/Kushagra1612 | kushagravr.xyz 
+PROFESSIONAL SUMMARY 
+Aspiring Software Development Engineer, B.Tech CSE (AI & ML), graduating 2027, with a foundation in Data Structures, 
+Algorithms, and OOP. Builds full-stack applications with React, Node.js, FastAPI, and PostgreSQL, designs REST APIs, and 
+ships through CI/CD with GitHub Actions. 
+EDUCATION 
+B. Tech in Computer Science and Engineering (AI & ML)                                                                                                    CGPA: 7.9 
+GL Bajaj Institute of Technology and Management | Greater Noida                                                                                      2023 - 2027              
+Intermediate                                                                                                                                                                   81.6% 
+Shri Gulab Rai Montessori Sr. Sec. School | Bareilly (CBSE)                                                                                                            2022               
+High School                                                                                                                                                                                         90.6% 
+Shri Gulab Rai Montessori Sr. Sec. School | Bareilly (CBSE)                                                                                                            2020               
+TECHNICAL SKILLS 
+Programming: C++, Java, JavaScript, Python, Kotlin, HTML, CSS 
+Frameworks/Libraries: React.js, Redux, Next.js, Node.js, PyTorch, OpenCV, FastAPI 
+AI/ML: LangChain, LangGraph, scikit-learn, Gemini API, YOLOv5 
+Tools: Git, GitHub, GitHub Actions (CI/CD), MySQL, PostgreSQL, Docker, Vercel, Render 
+Concepts: OOP, DSA, DBMS, REST APIs 
+AI-Assisted Development: GitHub Copilot, Claude, ChatGPT 
+EXPERIENCE 
+Android Developer Virtual Intern | AICTE-EduSkills (Google for Developers)  
+ 
+ 
+Jan 2025 – Mar 2025  
+ 
+Developed Android UI screens in Kotlin/Java with XML layouts and fixed 10+ state-management bugs caused by 
+configuration changes. 
+ 
+Integrated a Firebase backend through REST APIs for real-time data sync, reducing manual data-fetch latency by ~25%. 
+ 
+Collaborated in Agile sprints using Git branches and pull requests, and resolved merge conflicts during code review. 
+PROJECTS 
+Smart Budget AI | FastAPI, PostgreSQL, React, LangGraph, Gemini API                                                                                  2026 
+ 
+Engineered a full-stack finance assistant (FastAPI, PostgreSQL, React) that parses bank statements from 5 banks and auto-
+categorizes transactions via fuzzy merchant matching. 
+ 
+Designed a LangGraph multi-agent pipeline that routes user queries to up to 4 parallel agents and combines their outputs 
+through the Gemini API into real-time financial insights. 
+ 
+Implemented an Isolation Forest anomaly detector (scikit-learn), wrote 76 pytest cases, and automated deployment with 
+GitHub Actions to Vercel and Render. 
+Smart Traffic Management System | Python, OpenCV, PyTorch, YOLOv5, NumPy                                                                        2024       
+ 
+Created a real-time traffic system in Python and OpenCV that detects vehicle density across 2 simulated lanes. 
+ 
+Applied YOLOv5 for vehicle detection on simulated lane feeds, reaching ~92% accuracy. 
+ 
+Programmed signal timing that adjusts green-light duration based on per-lane vehicle density, cutting average wait time by 
+~35% in simulation. 
+CERTIFICATIONS 
+ 
+NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno) | Udemy 
+ 
+ 
+ 
+       Oct 2026 
+ 
+AI Agents Course | Hugging Face 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      Aug 2026 
+ 
+React -The Complete Guide 2025 (incl. Next.js, Redux) | Udemy  
+ 
+ 
+ 
+                    Nov 2025 
+ACHIEVEMENTS & COMPETITIVE PROGRAMMING 
+ 
+Solved 300+ LeetCode problems across arrays, strings, Linked List, trees, and DP; contest rating 1585. 
+ 
+Delivered an AI-powered solution within 24 hours at the Synapse.AI Hackathon, organised by DTU, New Delhi. 
+ 
+Prototyped a solution for a national-level problem statement at Smart India Hackathon (institute level). 

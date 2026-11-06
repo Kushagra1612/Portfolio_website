@@ -130,7 +130,7 @@ const additionalSkills = [
 
 const experiences = [
   {
-    title: "Android Developer Virtual Intern",
+    title: "Android Developer Intern",
     company_name: "AICTE-EduSkills (Google for Developers)",
     icon: google,
     iconBg: "#383E56",
